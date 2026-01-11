@@ -50,7 +50,15 @@ export default {
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					foreground: 'hsl(var(--card-foreground))',
+					blue: 'hsl(var(--card-blue))',
+					purple: 'hsl(var(--card-purple))',
+					pink: 'hsl(var(--card-pink))',
+					green: 'hsl(var(--card-green))'
+				},
+				badge: {
+					orange: 'hsl(var(--badge-orange))',
+					laurel: 'hsl(var(--laurel-green))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -62,6 +70,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				sans: ['Noto Sans SC', 'system-ui', 'sans-serif']
+			},
+			boxShadow: {
+				'card': '0 4px 20px -4px hsl(30 20% 70% / 0.3)',
+				'button': '0 4px 14px -2px hsl(16 76% 60% / 0.4)',
+				'nav': '0 2px 20px -2px hsl(30 20% 70% / 0.2)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
