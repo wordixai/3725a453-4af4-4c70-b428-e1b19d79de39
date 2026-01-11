@@ -3,9 +3,9 @@ import ProductBadge from './ProductBadge';
 
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-16 px-4 text-center">
+    <section className="pt-28 pb-12 px-4 text-center">
       {/* Product Badges */}
-      <div className="flex justify-center items-center gap-8 mb-10">
+      <div className="flex justify-center items-center gap-8 mb-8">
         <ProductBadge title="Product of the day" rank="1st" />
         <ProductBadge title="Product of the week" rank="1st" />
       </div>
@@ -22,11 +22,11 @@ const HeroSection = () => {
 
       {/* CTA Buttons */}
       <div className="flex justify-center items-center gap-3">
-        <button className="flex items-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground rounded-xl font-medium hover:opacity-90 transition-all shadow-button">
+        <button className="flex items-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all shadow-button">
           <Apple className="w-5 h-5" />
           下载 App
         </button>
-        <button className="flex items-center gap-2 px-6 py-3.5 bg-card text-foreground border border-border rounded-xl font-medium hover:bg-accent transition-colors shadow-card">
+        <button className="flex items-center gap-2 px-6 py-3.5 bg-card text-foreground border border-border rounded-full font-medium hover:bg-accent transition-colors shadow-card">
           <Shuffle className="w-5 h-5" />
           换一换
         </button>

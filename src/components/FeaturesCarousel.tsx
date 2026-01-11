@@ -37,8 +37,8 @@ const features = [
 
 const FeaturesCarousel = () => {
   return (
-    <section className="py-8 overflow-hidden">
-      <div className="flex gap-6 px-4 overflow-x-auto pb-4 scrollbar-hide justify-center">
+    <section className="py-4 overflow-hidden">
+      <div className="flex gap-4 px-4 overflow-x-auto pb-4 scrollbar-hide justify-center">
         {features.map((feature, index) => (
           <FeatureCard key={index} {...feature} />
         ))}
