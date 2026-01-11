@@ -12,16 +12,16 @@ const features = [
   {
     title: '按时睡觉',
     time: '22:00',
-    detail: '8个应用',
-    activeDays: [1, 2, 3, 4, 5, 6],
+    detail: '个应用',
+    activeDays: [6],
     color: 'purple' as const,
     icon: 'clock' as const,
   },
   {
     title: '专心工作',
     time: '9:00',
-    detail: '3个应用',
-    activeDays: [1, 2, 3, 4],
+    detail: '个应用',
+    activeDays: [0, 1, 2, 3],
     color: 'pink' as const,
     icon: 'lock' as const,
   },
@@ -29,7 +29,7 @@ const features = [
     title: '不要错过锻炼',
     time: '7:00',
     detail: '3个分类',
-    activeDays: [1, 2, 3, 4, 5],
+    activeDays: [3, 4],
     color: 'green' as const,
     icon: 'tag' as const,
   },
@@ -38,10 +38,21 @@ const features = [
 const FeaturesCarousel = () => {
   return (
     <section className="py-4 overflow-hidden">
-      <div className="flex gap-4 px-4 overflow-x-auto pb-4 scrollbar-hide justify-center">
-        {features.map((feature, index) => (
-          <FeatureCard key={index} {...feature} />
-        ))}
+      <div className="flex justify-center px-4">
+        <div className="flex">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0"
+              style={{
+                marginLeft: index === 0 ? 0 : '-40px',
+                zIndex: index,
+              }}
+            >
+              <FeatureCard {...feature} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

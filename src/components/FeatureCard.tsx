@@ -1,4 +1,4 @@
-import { Link, Clock, Lock, Tag } from 'lucide-react';
+import { Link, Clock, Lock, FolderOpen } from 'lucide-react';
 
 interface FeatureCardProps {
   title: string;
@@ -20,25 +20,26 @@ const iconMap = {
   link: Link,
   clock: Clock,
   lock: Lock,
-  tag: Tag,
+  tag: FolderOpen,
 };
 
 const days = ['一', '二', '三', '四', '五', '六', '日'];
 
 const FeatureCard = ({ title, time, detail, activeDays, color, icon }: FeatureCardProps) => {
   const IconComponent = iconMap[icon];
+  const isFolder = icon === 'tag';
 
   return (
-    <div className={`${colorClasses[color]} rounded-3xl p-5 min-w-[300px] w-[300px] h-[210px] flex-shrink-0 relative overflow-hidden`}>
+    <div className={`${colorClasses[color]} rounded-3xl p-5 min-w-[300px] w-[300px] h-[210px] flex-shrink-0 relative overflow-hidden shadow-lg`}>
       {/* Emoji avatar */}
-      <div className="absolute top-4 right-4 w-12 h-12 bg-card/80 rounded-xl flex items-center justify-center text-2xl">
-        👩
+      <div className="absolute top-4 right-4 w-12 h-12 bg-amber-200/80 rounded-full flex items-center justify-center text-2xl">
+        👶
       </div>
 
       {/* Icon and Title */}
       <div className="flex items-center gap-2 mb-6">
         <IconComponent className="w-5 h-5 text-foreground/60" />
-        <h3 className="font-semibold text-lg text-foreground">{title}</h3>
+        <h3 className="font-bold text-lg text-foreground">{title}</h3>
       </div>
 
       {/* Time and Detail */}
@@ -48,7 +49,7 @@ const FeatureCard = ({ title, time, detail, activeDays, color, icon }: FeatureCa
           <span className="text-sm">{time}</span>
         </div>
         <div className="flex items-center gap-2 text-foreground/60">
-          <Lock className="w-4 h-4" />
+          {isFolder ? <FolderOpen className="w-4 h-4" /> : <Lock className="w-4 h-4" />}
           <span className="text-sm">{detail}</span>
         </div>
       </div>

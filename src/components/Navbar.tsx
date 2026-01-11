@@ -1,10 +1,10 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Apple } from 'lucide-react';
 
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-background">
       <div className="flex items-center gap-2 px-4 py-2.5 bg-card rounded-full shadow-nav border border-border">
-        <span className="text-2xl">👩</span>
+        <span className="text-2xl">👶</span>
         <span className="font-semibold text-foreground">妈妈闹钟</span>
       </div>
 
@@ -20,6 +20,7 @@ const Navbar = () => {
       </div>
 
       <button className="flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-full font-medium hover:opacity-90 transition-opacity shadow-nav">
+        <Apple className="w-4 h-4" />
         下载 App
       </button>
     </nav>
